@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page Heading -->
+        <title>Assignment 5.3</title><br/>
+
+        <script type="text/javascript">
+        // StudentName, DOB, Skills
+        // Create a nested object as Address which contains properties as state, city, country, pincode.
+        // Add the new property as eyecolor and mother name of Student.
+        // Delete one property from your choice and display the Object details.
+
+            /* students object */
+            var students = [{
+                name: 'Ranga',
+                dob: '10-01-1985',
+                skill: 'java',
+                /* nested object 'address' inside students object */
+                address: {
+                    state: 'TamilNadu',
+                    city: 'Chennai',
+                    country: 'India',
+                    pincode: '600001'
+                }
+            }, {
+                name: 'Umesh',
+                dob: '11-02-1986',
+                skill: 'c++',
+                address: {
+                    state: 'Maharashtra',
+                    city: 'Mumbai',
+                    country: 'India',
+                    pincode: '400001'
+                }
+            }];
+
+            /* display contents of student object */
+            for (studentIndex in students) {
+                    console.log(students[studentIndex]);
+            }
+
+            /* Add key value pairs to the object */
+            students[0].motherName="Bhuvana";
+            students[0].eyeColor="Black";
+            students[1].motherName="Name2";
+            students[1].eyeColor="Brown";
+
+            /* Delete values from the object */
+            delete students[0].dob;
+            delete students[1].dob;
+
+            /* Print the new object key value pairs */
+            for (studentIndex in students) {
+                    console.log(students[studentIndex]);
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <!-- Page Heading -->
+        <h1>Assignment 5.3- Objects and nested Objects - Check results in page concole</h1><br/>
+        
+    </body>
+
+</html>

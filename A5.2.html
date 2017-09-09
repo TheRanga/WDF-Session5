@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page Heading -->
+        <title>Assignment 5.2</title><br/>
+
+        <script type="text/javascript">
+            function chkLetter(textval) {
+            // alert(""+ document.getElementById("textvalid"));
+            
+                /* Below code inside the function identities if the text is vowel or consonant */
+                if (textval.length < 1) {
+                    console.log("textval")
+                    alert("Please enter a letter");
+                } else {
+                    if (textval =='a' || textval == 'e' || textval == 'i' || textval == 'o' || textval == 'u' || textval =='A' || textval == 'E' || textval == 'I' || textval == 'O' || textval == 'U') {
+                        alert("Your letter is a vowel");
+                    } else {
+                        alert("Your letter is a consonant");
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- Page Heading -->
+        <h1>Assignment 5.2- Vowel or Consonant</h1><br/>
+
+        <!--get character as input-->
+        <input type="text" maxlength="1" required id="textvalid">
+
+        <!--Click button to pass value to function-->
+        <button onclick="chkLetter(textvalid.value)">Check letter</button>
+
+    </body>
+
+</html>

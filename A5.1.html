@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Page Heading -->
+        <title>Assignment 5.1</title><br/>
+        <script type="text/javascript">
+            window.onload = function()  {
+
+                //Function to calculate area of circle. Parameters Pi and radius are passed.
+                    function areaCircle(pi, radius) {
+                                    return pi*radius*radius;
+                    }
+                    //variable to get radius in runtime
+                    var r;
+                    r=parseInt(prompt("Enter the radius of the circle"));
+                    
+                    //calculate area of circle. call the function passing the pi value and the dynamically obtained radius value
+                    var area=areaCircle(3.14,r);
+
+                    //Update the area in the dedicate space in the document 
+                    document.getElementById("valuefield").innerHTML=area;
+                    //console.log(area);
+
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        <!-- Page Heading -->
+        <h1>Assignment 5.1- JS function to calculate area of circle</h1><br/>
+        <!--Label-->
+        <h3>Area of the circle is:</h3>
+
+        <!--Are of circle - Placeholder for the Value. This text does not appear as it would be replaced by -->
+        <p id="valuefield">Value Comes Here</p>
+
+            
+    </body>
+
+</html>

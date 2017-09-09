@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page Heading -->
+        <title>Assignment 5.4</title><br/>
+
+        <script type="text/javascript">
+        //This assignment will help you in mastering the following concept: Prototype
+        //5. Problem Statement
+        // Create a Constructor Object Pattern for Employee which have the properties as username, skills and basic salary.
+        // Create an object methods printdetails() which should display the employee details.
+        // Create an object methods as changesalary () which will update the salary of an employee.
+        // Display the final details of an employee after the change in salary.
+
+            function employeeDetail() {
+                //console.log(this);
+                this.username = "John Covan";
+                this.skills = "C++";
+                this.basicSalary = "5000";
+                console.log('You have invoked this function');
+            }
+
+            var employee = new employeeDetail();
+            console.log(employee);
+
+            /* Creation of Method to display the employee details */ 
+            employeeDetail.prototype.printDetail = function() {
+                return this.username + ', ' + this.skills + ', ' + this.basicSalary;
+            }
+
+            /* Calling the newly created method to print the object details */
+            var printFunc = employee.printDetail();
+            console.log(printFunc);
+
+            /* Create an object methods as changesalary () which will update the salary of an employee */
+            employeeDetail.prototype.changeSalary = function() {
+                this.basicSalary="10000";
+                return 'The updated salary of the employee is: ' + this.basicSalary;
+            }
+
+            /* Calling the newly created method to change the value of 'basicSalary' in the object */
+            var  changeSal = employee.changeSalary();
+            console.log(changeSal);
+
+            /* Display the final details of an employee after the change in salary */
+            console.log(employee);
+
+
+        </script>
+
+</head>
+
+    <body>
+        <!-- Page Heading -->
+        <h1>Assignment 5.4- Function Constructors and Methods</h1>
+
+        <h2>Please refer to the console for the output</h2>
+    </body>
+
+</html>
